@@ -26,48 +26,53 @@ html{
 .navigation-menu{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* padding: 10px 30px; */
-    justify-content: flex-start;
-    padding-bottom: 2%;
+    position: relative;
+    width: 100%;
+}
+.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding-left: 10%;
+    transition: 0.6s all;
 }
 
-.navigation-menu .first-nav-li {
+.menu-item {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-link {
+    color: #000000;
+    text-decoration: none;
+}
+.first-nav-li{
     display: flex;
+    justify-content: flex-start;
     gap: 20px;
-    padding-left: 5%;
-    
 }
 
 .second-nav-li {
     display: flex;
     gap: 20px;
-    padding-left: 30%; 
+    padding-left: 25%;
 }
 
-.first-nav-li, .second-nav-li{
-    font-size: 120%;
-    transition: 0.2s ease-in-out;
-}
-
-.navigation-menu nav li, .nav-link {
-    list-style: none;
-    color: black;
-    font-weight: bold;
-    cursor: pointer; 
-    text-decoration: none
-  }
-
-  .nav-link:hover{
+.menu-link:hover{
     color: #0484d4;
     transition: 0.2s ease-in-out;
   }
 
+
+
+
+
+/* Sidebar */
 .main-info{
     display: flex;
 }
-
-/* Sidebar */
 .sidebar-filter{
     background: #f8f9fa;
     width: 25%;
