@@ -76,6 +76,7 @@ html{
 .sidebar-filter{
     background: #f8f9fa;
     width: 25%;
+    padding-top: 5%;
 }
 
 .input-search{
@@ -94,7 +95,7 @@ html{
     color: white;
     padding: 10px;
     cursor: pointer;
-    font-size: 120%;
+    font-size: 18px;
 }
 
 .input-search button:hover,
@@ -183,24 +184,22 @@ input[type="range"]{
     background: #f8f9fa; 
     display: flex;
     flex-wrap: wrap;
-    padding: 5% 5% 0 5%;
+    padding: 5% 5% 5% 5%;
     justify-content: space-around;
     gap: 20px; 
 }
-
-.product-text{
-    background: white; 
+.product-back-color{
+    background-color: white;
     width: 100%;
+    padding: 5% 5% 5% 5%;
 }
 
 .product-list{
-    background-color: white;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
-    padding: 5% 5% 0 5%;
+    padding-top: 5%;
 }
 
 .product .tea-product img{
@@ -211,4 +210,86 @@ input[type="range"]{
     border: 1px solid #b0b3b7;
     padding: 5px 10px;
     border-radius: 10%;
+}
+.tea-product a{
+    text-decoration: none;
+    color: #000000;
+}
+/* Footer */
+.footer-menu{
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 5% 5% 5%;
+    border-top: 1px solid #b0b3b7;
+    border-bottom: 1px solid #b0b3b7;
+    line-height: 30px;
+}
+
+.footer-menu h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-link{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.Icons {
+    display: flex;
+    gap: 30px;
+}
+.Icons a{
+ color: #000000;
+}
+
+.footer-menu li{
+    color: #4a4b4b;
+    list-style: none;
+}
+
+.subscribe input {
+    font-size: 15px;
+    padding: 10px; 
+    border: 1px solid #b0b3b7;
+    margin-top: 10%;
+    width: 130%;
+}
+
+.subscribe-btn{
+    background-color: #0484d4;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10%;
+    cursor: pointer;  
+    transition: 0.2s ease-in-out;
+    border: none;
+}
+
+.subscribe-btn:hover{
+    background-color: #0474bc;  
+}
+
+@media (max-width: 1200px) {
+    .second-nav-li {
+        padding-left: 15%;
+    }
+    .menu-link{
+        font-size: 17px;
+    }
+    .input-search{
+        padding: 5% 0 0 10%;
+    }
+    .filter-price{
+        margin-left: 5%;
+    }
+    .categories{
+        margin: 10% 0 10% 5%;
+    }
 }

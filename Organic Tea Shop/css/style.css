@@ -313,7 +313,9 @@ html{
     display: flex;
     gap: 30px;
 }
-
+.Icons a{
+    color: #000000;
+   }
 .footer-menu li{
     color: #4a4b4b;
     list-style: none;
