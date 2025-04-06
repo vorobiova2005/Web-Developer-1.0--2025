@@ -1,0 +1,209 @@
+/* Стилі для всієї сорінки */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Шрифти */
+
+html{
+    font-family: "Lato", sans-serif;
+}
+
+
+/* HEADER */
+#logo-link {
+    display: flex; 
+    align-items: center;
+    width: 10%; 
+    padding-left: 2%;
+}
+    #logo-cup{
+    width: 100%; 
+} 
+
+.navigation-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 10px 30px; */
+    justify-content: flex-start;
+    padding-bottom: 2%;
+}
+
+.navigation-menu .first-nav-li {
+    display: flex;
+    gap: 20px;
+    padding-left: 5%;
+    
+}
+
+.second-nav-li {
+    display: flex;
+    gap: 20px;
+    padding-left: 30%; 
+}
+
+.first-nav-li, .second-nav-li{
+    font-size: 120%;
+    transition: 0.2s ease-in-out;
+}
+
+.navigation-menu nav li, .nav-link {
+    list-style: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer; 
+    text-decoration: none
+  }
+
+  .nav-link:hover{
+    color: #0484d4;
+    transition: 0.2s ease-in-out;
+  }
+
+.main-info{
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar-filter{
+    background: #f8f9fa;
+    width: 25%;
+}
+
+.input-search{
+    padding: 5% 0 0 20%;
+}
+ 
+.input-search input{
+    padding: 7px;
+    border: 1px solid #b0b3b7;
+    font-size: 15px;
+}
+
+.input-search button{
+    background: #0088cc;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+.input-search button:hover,
+.filter-price button:hover{
+    background-color: #0474bc;  
+}
+
+.filter-price{
+    margin-top: 5%;
+    margin-left: 20%;
+    
+}
+
+.input-search button:hover,
+.filter-price button:hover{
+    background-color: #0474bc;  
+}
+
+.filter-price h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 5%;
+}
+
+input[type="range"]{
+    width: 80%;
+    height: 4px; 
+}
+
+/* .btn-price{
+    display: flex;
+} */
+
+.filter-price p{
+    padding-top: 5%;
+    font-size: 15px;
+    
+}
+
+.filter-price button{
+    padding: 3px 20px 3px 20px;
+    border: none;
+    background: #0088cc;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5%;  
+}
+
+.btn-price{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories{
+    width: 60%;
+    margin: 10% 0 10% 20%;
+}
+
+.categories h3{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.categories li, .categories a{
+    padding-top: 5%;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.categories ul li a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories a:hover{
+    color: #0484d4;
+    transition: 0.2s ease-in-out;
+}
+
+/* Product */
+.product{
+    width: 80%;
+    background: #f8f9fa; 
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 5% 0 5%;
+    justify-content: space-around;
+    gap: 20px; 
+}
+
+.product-text{
+    background: white; 
+    width: 100%;
+}
+
+.product-list{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 5% 5% 0 5%;
+}
+
+.product .tea-product img{
+    height: 250px;
+}
+.tea-product button{
+    background-color: #fff;
+    border: 1px solid #b0b3b7;
+    padding: 5px 10px;
+    border-radius: 10%;
+}

@@ -1,0 +1,501 @@
+/* Стилі для всієї сорінки */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Шрифти */
+
+html{
+    font-family: "Lato", sans-serif;
+}
+
+/* HEADER */
+ header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Images/cup-tea-with-flavour-spices-herbs-baner.webp') no-repeat center/cover;
+    background-position: center center; 
+    padding-bottom: 5%; 
+    background-attachment: fixed;
+  }   
+
+
+  #logo-link {
+    display: flex; 
+    align-items: center;
+    width: 10%; 
+    padding-left: 2%;
+}
+    #logo-cup{
+    width: 100%; 
+} 
+
+.navigation-menu{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding-left: 5%;
+    transition: 0.6s all;
+}
+
+.menu-item {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-link {
+    color: #fff3f3;
+    text-decoration: none;
+}
+.first-nav-li{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.second-nav-li {
+    display: flex;
+    gap: 20px;
+    padding-left: 25%;
+}
+.tex-box-header{
+    padding: 10% 10%;
+    color: #fff;
+}
+
+.main-text-head{
+    font-size: 60px;
+}
+
+.secondary-subtitle-head{
+    padding-top: 2%;
+    font-size: 30px;
+}
+
+.button-head-shop-now, .button-head-call-us, .button-head-email-us{
+    /* background-color: #fff; */
+    border-color: #fff;
+    width: 13%;
+    padding: 10px 5px 10px 5px;
+    font-size: 20px;
+    margin-top: 3%;
+    cursor: pointer;  
+    transition: 0.2s ease-in-out;
+}
+
+.button-head-call-us, .button-head-email-us{
+    margin-left: 3%;
+    background: transparent;
+    color: #fff;
+}
+
+.button-head-shop-now:hover{
+    background-color: black;
+    border: #fff;
+    color: #fff;
+}
+.button-head-call-us:hover, 
+.button-head-email-us:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.fa-bag-shopping, .fa-phone-flip, .fa-envelope{
+    padding-left: 5%;
+}
+
+.hamberger {
+    display: none;
+  }
+
+
+/* Teas block shop now */
+
+.teas-block-shop{
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+
+.block-black-tea, .block-green-tea, .block-herbal-tea{
+    width: 30%;
+    position: relative;
+}
+
+.block-black-tea::after, .block-green-tea::after, .block-herbal-tea::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+}
+
+.teas-block-shop img{
+    width: 100%;
+    display: block;
+}
+
+.three-banners-text{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+     /* right: 0; */
+    color: white;
+    padding: 5%;
+    z-index: 1;
+}
+
+
+.teas-block-shop h3{
+    font-size: 25px;
+} 
+.teas-block-shop p{
+    padding-top: 3%;
+    line-height: 2;
+    padding-bottom: 3%;
+}
+
+.teas-block-shop button{
+    border-color: #fff;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    margin-top: 3%;
+    cursor: pointer;  
+    transition: 0.2s ease-in-out;
+    border: none;
+}
+
+.block-black-tea button:hover, 
+.block-green-tea button:hover, 
+.block-herbal-tea button:hover{
+    background-color: black;
+    color: #fff;
+    border: none;
+}
+
+/* Featured Products */
+.featured-products{
+    margin-top: 10%;
+    background-color: #f5f7f9;
+  }
+
+.featured-products h2{
+    padding-top: 10%;
+    text-align: center;
+    font-size: 250%;
+}
+
+.featured-prodt-line{
+    background-color: #0084D6;
+    height: 2px;
+    width: 10%;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 0 5% 0 5%  ;
+}
+
+.product .tea-product img{
+    height: 300px;
+}
+.tea-product button{
+    background-color: #fff;
+    border: 1px solid #b0b3b7;
+    padding: 5px 10px;
+    border-radius: 10%;
+}
+
+/* New in store */
+.news-section{
+    background-color:#f5f7f9;
+    padding-top: 10%;
+}
+
+.news-in-store{
+    background:  linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url('../Images/fruit-tea-baner-spesial-offer-min.png') no-repeat center/cover;
+    background-attachment: fixed;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10% 0 10% 5%;
+    color: #fff;
+}
+
+.news-text{
+    width: 40%;
+}
+
+.news-in-store h2{
+    font-size: 300%;
+}
+
+.news-in-store h3{
+    font-size: 200%;
+    padding-top: 2%;
+}
+
+.news-in-store p{
+    padding-top: 2%;
+}
+
+.news-in-store button{
+    border-color: #fff;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    margin-top: 10%;
+    cursor: pointer;  
+    transition: 0.2s ease-in-out;
+    border: none;
+}
+
+.news-in-store button:hover{
+    background-color: black;
+    color: #fff;
+    border: none; 
+}
+
+/* Info content */
+.info-content{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 auto ;
+    background-color:#f5f7f9;
+    padding: 10% 10% 10% 10%;
+}
+
+.content-in{
+    width: 20%;
+}
+
+/* Footer */
+.footer-menu{
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 5% 5% 5%;
+    border-top: 1px solid #b0b3b7;
+    border-bottom: 1px solid #b0b3b7;
+    line-height: 30px;
+}
+
+.footer-menu h3{
+    font-size: 140%;
+    font-weight: 400;
+}
+
+.footer-link{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.Icons {
+    display: flex;
+    gap: 30px;/* Відстань між іконками */
+}
+
+.footer-menu li{
+    color: #4a4b4b;
+    list-style: none;
+}
+
+.subscribe input {
+    font-size: 15px;
+    padding: 10px; 
+   /*  width: 100%;  */
+   border: 1px solid #b0b3b7;
+   margin-top: 10%;
+   width: 130%;
+}
+
+.subscribe-btn{
+    background-color: #0484d4;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10%;
+    cursor: pointer;  
+    transition: 0.2s ease-in-out;
+    border: none;
+}
+
+.subscribe-btn:hover{
+    background-color: #0474bc;  
+}
+
+@media (max-width: 1200px) {
+    .second-nav-li {
+        padding-left: 15%;
+    }
+    .menu-link{
+        font-size: 17px;
+    }
+    .button-head-shop-now, .button-head-call-us, .button-head-email-us{
+        font-size: 19px;
+    }
+    .teas-block-shop{
+        width: 95%;
+    }
+}
+@media (max-width: 991px) {
+    .second-nav-li {
+        padding-left: 7%;
+    }
+    .menu-link{
+        font-size: 14px;
+    }
+    .button-head-shop-now, .button-head-call-us, .button-head-email-us{
+        font-size: 13px;
+    }
+    .main-text-head{
+        font-size: 40px;
+    }
+    .secondary-subtitle-head{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navigation-menu{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100vh;
+        padding: 20px 15px;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: 0.6s all;
+        z-index: 10;
+      }
+
+    .first-nav-li{
+        position: fixed;
+        flex-direction: column;  
+        margin-top: 10vh;
+    }
+    .second-nav-li{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 50vh;
+    }
+    .menu-active {
+        left: 0;
+      }
+      .menu-item {
+        padding-right: 0;
+        border: none;
+        margin: 10px 0;
+      }
+      .menu-link {
+        font-size: 20px;
+      }
+      .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateX(-50%);
+        width: 26px;
+        height: 12px;
+      }
+      .hamburger span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 2px;
+        transition: 0.5s all;
+      }
+      .hamburger-active span {
+        margin-bottom: -2px;
+        margin-bottom: -2px;
+      }
+      .hamburger-active span:nth-child(1) {
+        transform: translateY(3px) rotate(-45deg);
+      }
+      .hamburger-active span:nth-child(2) {
+        display: none;
+      }
+      .hamburger-active span:nth-child(3) {
+        transform: translateY(3px) rotate(45deg);
+      }
+      .xs-hidden {
+        display: none;
+      }
+      .xs-visible {
+        display: block;
+      }
+
+    #logo-link{
+        width: 15%;
+    }
+
+    .main-text-head{
+        text-align: center;
+        font-size: 50px;
+    }
+    .secondary-subtitle-head{
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .header-btn{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+    .header-btn button{
+        width: 100%;
+        margin: 0;
+        margin-top: 5%;
+    }
+    
+    .teas-block-shop{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .block-black-tea, .block-green-tea, .block-herbal-tea{
+        width: 100%;
+        margin-top: 3%;
+    }
+    .teas-block-shop img{
+        height: 400px;
+        display: block;
+    }
+    .three-banners-text{
+        width: 100%;
+    }
+    .teas-block-shop button{
+        width: 90%;
+    }
+}
