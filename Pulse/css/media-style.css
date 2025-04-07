@@ -1,0 +1,56 @@
+@media (max-width: 1200px){
+    
+}
+
+@media (max-width: 991px){
+    .promo{
+        padding: 2% 5% 0 5%;
+    }
+}
+
+@media (max-width: 767px){
+    .header-logo img{
+        width: 80%;
+    }
+
+    .header-phone{
+        font-size: 15px;
+    }
+
+    .header-official span{
+        font-size: 15px;
+    }
+
+    .promo-header{
+        font-size: 32px;
+    }
+
+    .promo-subheader{
+        font-size: 20px;
+    }
+
+    .benedit-h2{
+        font-size: 20px;
+    }
+
+    .benefit-info{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block-info{
+        width: 80%;
+    }
+}
+
+@media (max-width: 575px){
+    .header-official{
+        display: none;
+    }
+
+    .promo-wrapper{
+        text-align: center;
+        align-items: center;
+    }
+}
+
