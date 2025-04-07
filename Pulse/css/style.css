@@ -132,3 +132,42 @@
     text-decoration: underline;
     text-transform: uppercase;
 }
+
+.benefits{
+    background: #F6F6F6;
+}
+
+.benedit-h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    padding-top: 10%;
+}
+
+.benefit-info{
+    padding: 5% 0 5% 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 50px;
+}
+
+.block-info{
+    width: 30%;
+}
+
+.block-info h3{
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 3%;
+}
+
+.block-info p{   
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 3%;
+}
+
+.block-info a{
+    color: #c70101;
+}
