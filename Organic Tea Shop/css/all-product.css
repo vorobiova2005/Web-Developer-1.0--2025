@@ -291,5 +291,17 @@ input[type="range"]{
     }
     .categories{
         margin: 10% 0 10% 5%;
+    } 
+}
+@media (max-width: 991px) {
+    .second-nav-li {
+        padding-left: 7%;
+    }
+    .menu-link{
+        font-size: 14px;
+    }
+    .block-flex{
+        display: flex;
+        flex-direction: column;
     }
 }
