@@ -184,6 +184,10 @@ input[type="range"]{
     justify-content: space-around;
     gap: 20px; 
 }
+
+.product-text{
+    font-size: 30px;
+}
 .product-back-color{
     background-color: white;
     width: 100%;
