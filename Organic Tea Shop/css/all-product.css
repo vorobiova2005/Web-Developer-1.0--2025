@@ -125,10 +125,6 @@ input[type="range"]{
     height: 4px; 
 }
 
-/* .btn-price{
-    display: flex;
-} */
-
 .filter-price p{
     padding-top: 5%;
     font-size: 15px;
@@ -300,8 +296,24 @@ input[type="range"]{
     .menu-link{
         font-size: 14px;
     }
-    .block-flex{
+    .main-info{
         display: flex;
         flex-direction: column;
+        width: 100%;
+        
+    }
+    .sidebar-filter{
+        width: 100%;
+    }
+    .product{
+        width: 100%;
+    }
+    
+    .input-search{
+        padding: 5% 0 0 5%;
+    }
+
+    input[type="range"]{
+        
     }
 }

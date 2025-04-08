@@ -6,6 +6,9 @@
     .promo{
         padding: 2% 5% 0 5%;
     }
+    .consultation{
+        padding-left: 5%;
+    }
 }
 
 @media (max-width: 767px){
@@ -29,7 +32,7 @@
         font-size: 20px;
     }
 
-    .benedit-h2{
+    .title{
         font-size: 20px;
     }
 
@@ -41,16 +44,32 @@
     .block-info{
         width: 80%;
     }
+    .consultation{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+    .title-left{
+        text-align: center;
+    }
+    .feed-form{
+        width: 100%;
+    }
 }
 
 @media (max-width: 575px){
     .header-official{
         display: none;
     }
-
     .promo-wrapper{
         text-align: center;
         align-items: center;
     }
+    .consultation{
+       
+    }
+
 }
 
