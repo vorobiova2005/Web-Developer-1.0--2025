@@ -98,5 +98,8 @@
     .catalog-content{
         justify-content: center;
     }
+    .modal{
+        width: 280px;
+    }
 }
 
