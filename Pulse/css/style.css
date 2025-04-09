@@ -224,13 +224,18 @@
 }
 
 .carousel{
-   padding: 81px 0; 
+   padding: 81px 0;
+   width: 100%;
+   margin: 0 auto;
 }
 
 .carousel-inner{
     position: relative;
-    width: 750px;
+    width: 60%;
     margin: 0 auto;
+}
+.carousel-inner img{
+    width: 100%;
 }
 .carousel .slick-prev, .carousel .slick-next{
     position: absolute;
@@ -433,4 +438,41 @@ hr{
 }
 .catalog-item-back:hover{
     color: #c70101;
+}
+
+.feedback{
+    position: relative;
+    width: 100%;
+
+}
+
+.feedback-title{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.feedback-block{
+    display: flex;
+    margin-top: 5%;
+}
+
+.feedback-info{
+    margin-left: 5%;
+}
+.cutomer{   
+    font-weight: 700;
+    font-size: 18px;
+}
+.marafon-numbers{
+    font-weight: 500;
+    font-size: 14px;
+    color: #646464;
+}
+
+.customer-feedback{
+    padding-top: 2%;   
+    font-weight: 300;
+    font-size: 16px;
 }
