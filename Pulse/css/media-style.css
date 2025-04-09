@@ -78,6 +78,9 @@
         width: 150px;
         font-size: 15px;
     }
+    .footer-info{
+        width: 50%;
+    }
 }
 
 @media (max-width: 575px){
@@ -89,8 +92,8 @@
         align-items: center;
     } 
    .catalog-tab{
-        width: 130px;
-        font-size: 13px;
+        width: 100px;
+        font-size: 11px;
     }
     .catalog-content{
         justify-content: center;
