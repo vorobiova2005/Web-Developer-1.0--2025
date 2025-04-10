@@ -180,6 +180,15 @@
     padding: 100px 0 92px 0;
     background: url('../Image/bg2.png') center center/cover no-repeat;
 }
+
+.consultation .error{
+    border: 1px solid #c70101;
+}
+.consultation label.error {
+    color: #F6F6F6;
+    border: none;
+    margin-bottom: 15px;
+}
 .title-left{
     color: #ffffff;
     text-align: left;
@@ -575,4 +584,11 @@ hr{
 }
 .modal-mini{
     min-height: 140px;
+}
+.modal .error{
+    border: 1px solid #c70101;
+}
+.modal label.error {
+    border: none;
+    margin-bottom: 15px;
 }
