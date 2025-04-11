@@ -604,3 +604,60 @@ hr{
 .pageup img{
     width: 100%;
  }
+
+/* Анімація */
+
+ @keyframes heartbeat{
+    from{
+        transform: scale(1);
+    } 
+    50%{
+        transform: scale(1.4);
+    }
+    to{
+        transform: scale(1);
+    }
+ }
+
+ @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes swing {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.advantages-icon-animated{
+    animation: heartbeat 1.5s ease infinite;
+}
+ .advantages-icon-animated:hover{
+    animation-play-state: paused;
+ }
+
+.shoe-icon {
+    animation: bounce 1.5s infinite;
+  }
+.shoe-icon:hover{
+    animation-play-state: paused;
+ }
+
+.cup-icon {
+    animation: swing 1.5s infinite;
+    transform-origin: top center;
+}
+.cup-icon:hover{
+    animation-play-state: paused;
+ }
