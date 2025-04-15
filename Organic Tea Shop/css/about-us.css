@@ -80,17 +80,21 @@ html{
 .about-us{
     background-color: #f8f9fa; 
     padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .about-us-container{
     background-color: #fff;
     display: flex;
+    justify-content: space-between;
     width: 90%;
     margin: 0 auto;
 }
 .about-text{
     padding-left: 5%;
     padding-top: 5%;
+    padding-bottom: 5%;
+    width: 50%;
 }
 .text-line{
     background-color: #0084D6;
@@ -101,4 +105,12 @@ html{
 }
 .about-us-h2{
     font-size: 45px;
+}
+.about-us-p{
+    margin-top: 3%;
+}
+.about-img{
+    background: url('../Images/stages-of-tea-preparation.jpg') no-repeat;
+    width: 40%;
+    height: 60vh;
 }
