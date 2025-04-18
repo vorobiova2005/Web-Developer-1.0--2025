@@ -447,12 +447,12 @@
                 
                 <form action="" class="contacts-form">
                     <div class="contacts-input">
-                        <input name="name" id="name" type="text">
+                        <input required name="name" id="name" type="text">
                         <label for="name">Ваше ім'я</label>
                     </div>
 
                     <div class="contacts-input">
-                        <input name="email" id="email" type="email">
+                        <input required name="email" id="email" type="email">
                         <label for="email">Ваша пошта</label>
                     </div>
 
@@ -460,16 +460,20 @@
                         <textarea name="text" id="text"></textarea>
                         <label for="text">Ваше повідомлення</label>
                     </div>
-                    <div>
+                    <div class="contacts-triggers">
                         <button class="contacts-btn btn">Відправити повідомлення</button>
+                        <div class="contacts-policy">
+                            <input required type="checkbox">
+                            <span>Я згоден(а) з <a href="policy.html">політикою конфіденційності</a></span>
+                        </div>
                     </div>
                     
                 </form>
             </div>
         </div>
     </div>
-</section>
-
+</section> 
+  
     <script src="js/script.js"></script>
 </body>
 </html>
