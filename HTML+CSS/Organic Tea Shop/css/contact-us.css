@@ -1,0 +1,78 @@
+/* Стилі для всієї сорінки */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Шрифти */
+
+html{
+    font-family: "Lato", sans-serif;
+}
+
+/* HEADER */
+ header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Images/cup-of-tea-with-phone-baner-contact-us-min.jpg') no-repeat center/cover;
+    background-position: center center; 
+    padding-bottom: 5%; 
+    background-attachment: fixed;
+  }   
+
+
+  #logo-link {
+    display: flex; 
+    align-items: center;
+    width: 10%; 
+    padding-left: 2%;
+}
+    #logo-cup{
+    width: 100%; 
+} 
+
+.navigation-menu{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding-left: 5%;
+    transition: 0.6s all;
+}
+
+.menu-item {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-link {
+    color: #fff3f3;
+    text-decoration: none;
+}
+.first-nav-li{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.second-nav-li {
+    display: flex;
+    gap: 20px;
+    padding-left: 25%;
+}
+.tex-box-header{
+    padding: 10% 10%;
+    color: #fff;
+}
+
+.main-text-head{
+    font-size: 60px;
+    text-align: center;
+}
+
