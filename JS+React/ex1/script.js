@@ -1,18 +1,30 @@
-const numberOfFilms = +prompt('Скільки фільмів ви вже переглянули?', '');
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors:{},
-    genres: [],
-    privat: false
-};
+/* *
+   **
+   ***
+   **** */
 
-const a = prompt('Один з переглянутих фільмів?', ''),
-      b = prompt('На скільки ви оціните цого?', ''),
-      c = prompt('Один з переглянутих фільмів?', ''),
-      d = prompt('На скільки ви оціните цого?', '');
+let result = '';
+const length = 7;
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+for( let i = 1; i < length; i++){
 
-console.log(personalMovieDB);
+    for (let j = 0; j < i; j++){
+        result += "*";
+    }
+
+    result += '\n';
+}
+
+console.log(result);
+
+/* Мітка first */
+first: for( let i = 0; i < 3; i++){
+    console.log(`First level : ${i}`);
+    for (let j = 0; j < 3; j++){
+        console.log(`Second level : ${j}`);
+        for (let k = 0; k < 3; k++){
+            if(k === 2) continue first;
+            console.log(`Third level : ${k}`);
+        }
+    }
+}
