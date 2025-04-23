@@ -5,7 +5,7 @@ function start(){
     numberOfFilms = +prompt('Скільки фільмів ви вже переглянули?', '');
 
     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('Скільки фільмів ви вже переглянули?', '');
+        numberOfFilms = +prompt('Скільки фільмів ви вже переглянули?', '').trim();
     }
 }
 
@@ -21,8 +21,8 @@ const personalMovieDB = {
 
 function rememberMyFilms(){
     for (let i = 0; i < 2; i++){
-        const a = prompt('Один з переглянутих фільмів?', ''),
-              b = prompt('На скільки ви оціните цого?', '');
+        const a = prompt('Один з переглянутих фільмів?', '').trim(),
+              b = prompt('На скільки ви оціните цого?', '').trim();
     
         if (a != null && b != null && a !='' && b != '' && a.length < 50){
             personalMovieDB.movies[a] = b;
