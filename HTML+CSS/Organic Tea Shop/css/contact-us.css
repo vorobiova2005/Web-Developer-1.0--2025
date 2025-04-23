@@ -75,4 +75,67 @@ html{
     font-size: 60px;
     text-align: center;
 }
+.contact{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: rgba(235, 235, 235, 0.371);
+}
+.contact-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.contact-text{
+    width: 40%;
+    margin-top: 5%;
+}
+.contact-descr-bold{
+    font-size: 15px;
+    font-weight: bold;
+}
+.contact-title{
+    font-size: 42px;
+}
+.contact-title-descr, .contact-subtitle-descr{
+    font-size: 16px;
+    padding-top: 3%;
+}
+.contact-subtitle{
+    font-size: 26px;
+    padding-top: 3%;
+}
+.contact-form{
+    background-color: #fff;
+    padding: 2%;
+    width: 40%;
+}
+.form-for-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-for-contact input, .form-for-contact textarea{
+    padding: 12px;
+    border: 1px solid rgba(163, 163, 163, 0.371);
+   
+}
+.form-for-contact textarea{
+    width: 100%;
+    height: 220px;
+    resize: none;
+}
 
+.contact-btn{
+    background-color: #0484d4;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;  
+    transition: 0.2s ease-in-out;
+    border: none;
+    
+}
+
+.contact-btn:hover{
+    background-color: #0474bc;  
+}

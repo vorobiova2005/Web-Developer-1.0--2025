@@ -720,7 +720,7 @@ template {
 .skills {
   padding-top: 120px;
 }
-.skills-items {
+.skills-wrapper {
   margin-top: 60px;
   padding: 0 10px;
   display: grid;
