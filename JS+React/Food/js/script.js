@@ -151,12 +151,13 @@ window.addEventListener("DOMContentLoaded", () =>{
     //Викориистання класів для карточок
 
     class MenuCard{
-        constructor (src, alt, title, descr, price, parentSelector) {
+        constructor (src, alt, title, descr, price, parentSelector, ...classes) {
             this.src = src;
             this.alt = alt;
             this.title = title;
             this.descr = descr;
             this.price = price;
+            this.classes = classes;
             this.parent = document.querySelector(parentSelector);
             this.transfer = 41;
             this.changeToUAH();
@@ -168,8 +169,15 @@ window.addEventListener("DOMContentLoaded", () =>{
 
         render () {
             const element = document.createElement('div');
+
+            if(this.classes.length === 0) {
+                this.element = 'menu__item';
+                element.classesList.add(this.element);
+            } else{
+                this.classes.forEach(className => element.classList.add(className));
+            }
+            
             element.innerHTML = `
-                <div class="menu__item">
                     <img src=${this.src} alt=${this.alt}>
                     <h3 class="menu__item-subtitle">${this.title}</h3>
                     <div class="menu__item-descr">${this.descr}</div>
@@ -178,7 +186,6 @@ window.addEventListener("DOMContentLoaded", () =>{
                         <div class="menu__item-cost">Ціна:</div>
                         <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
                     </div>
-                </div>
             `;
 
             this.parent.append(element);
@@ -191,7 +198,9 @@ window.addEventListener("DOMContentLoaded", () =>{
         "Меню «Фітнес»",
         "Меню «Фітнес» - це новий підхід до приготування страв: більше свіжих овочів і фруктів. Продукт активних і здорових людей. Це абсолютно новий продукт з оптимальною ціною та високою якістю!",
         9,
-        '.menu .container'
+        '.menu .container',
+        'menu__item',
+        'big'
 
     ).render();
 
@@ -201,7 +210,9 @@ window.addEventListener("DOMContentLoaded", () =>{
         'Меню «Пісне»',
         'Меню «Пісне» - це ретельний підбір інгредієнтів: повна відсутність продуктів тваринного походження, молоко з мигдалю, вівса, кокоса або гречки, правильна кількість білків завдяки тофу та імпортним вегетаріанським стейкам.',
         14,
-        ".menu .container"
+        ".menu .container",
+        'menu__item',
+        'big'
     ).render();
 
     new MenuCard(
@@ -210,7 +221,9 @@ window.addEventListener("DOMContentLoaded", () =>{
         'Меню «Преміум»',
         'У меню «Преміум» ми використовуємо не тільки гарний дизайн упаковки, а й якісне виконання страв. Червона риба, морепродукти, фрукти - ресторанне меню без походу в ресторан!',
         21,
-        ".menu .container"
+        ".menu .container",
+        'menu__item',
+        'big'
     ).render();
 
 });
