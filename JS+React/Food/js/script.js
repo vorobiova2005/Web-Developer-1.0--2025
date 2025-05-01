@@ -148,8 +148,8 @@ window.addEventListener("DOMContentLoaded", () =>{
 
     //Викориистання класів для карточок
 
-    class MenuCard{
-        constructor (src, alt, title, descr, price, parentSelector, ...classes) {
+    class MenuCard {
+        constructor(src, alt, title, descr, price, parentSelector, ...classes) {
             this.src = src;
             this.alt = alt;
             this.title = title;
@@ -157,87 +157,104 @@ window.addEventListener("DOMContentLoaded", () =>{
             this.price = price;
             this.classes = classes;
             this.parent = document.querySelector(parentSelector);
-            this.transfer = 41;
-            this.changeToUAH();
+            this.transfer = 27;
+            this.changeToUAH(); 
         }
 
         changeToUAH() {
-            this.price = this.price * this.transfer;
+            this.price = this.price * this.transfer; 
         }
 
-        render () {
+        render() {
             const element = document.createElement('div');
 
-            if(this.classes.length === 0) {
-                this.element = 'menu__item';
-                element.classesList.add(this.element);
-            } else{
+            if (this.classes.length === 0) {
+                this.classes = "menu__item";
+                element.classList.add(this.classes);
+            } else {
                 this.classes.forEach(className => element.classList.add(className));
             }
-            
-            element.innerHTML = `
-                    <img src=${this.src} alt=${this.alt}>
-                    <h3 class="menu__item-subtitle">${this.title}</h3>
-                    <div class="menu__item-descr">${this.descr}</div>
-                    <div class="menu__item-divider"></div>
-                    <div class="menu__item-price">
-                        <div class="menu__item-cost">Ціна:</div>
-                        <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
-                    </div>
-            `;
 
+            element.innerHTML = `
+                <img src=${this.src} alt=${this.alt}>
+                <h3 class="menu__item-subtitle">${this.title}</h3>
+                <div class="menu__item-descr">${this.descr}</div>
+                <div class="menu__item-divider"></div>
+                <div class="menu__item-price">
+                    <div class="menu__item-cost">Цена:</div>
+                    <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
+                </div>
+            `;
             this.parent.append(element);
         }
     }
 
-    new MenuCard(
-        "img/tabs/vegy.jpg",
-        "vegy",
-        "Меню «Фітнес»",
-        "Меню «Фітнес» - це новий підхід до приготування страв: більше свіжих овочів і фруктів. Продукт активних і здорових людей. Це абсолютно новий продукт з оптимальною ціною та високою якістю!",
-        9,
-        '.menu .container',
-        'menu__item',
-        'big'
+    getResource('http://localhost:3000/menu')
+        .then(data => {
+            data.forEach(({img, altimg, title, descr, price}) => {
+                new MenuCard(img, altimg, title, descr, price, ".menu .container").render();
+            });
+        });
 
-    ).render();
+    // getResource('http://localhost:3000/menu')
+    //     .then(data => createCard(data));
 
-    new MenuCard(
-        "img/tabs/post.jpg",
-        "post",
-        'Меню «Пісне»',
-        'Меню «Пісне» - це ретельний підбір інгредієнтів: повна відсутність продуктів тваринного походження, молоко з мигдалю, вівса, кокоса або гречки, правильна кількість білків завдяки тофу та імпортним вегетаріанським стейкам.',
-        14,
-        ".menu .container",
-        'menu__item',
-        'big'
-    ).render();
+    // function createCard(data) {
+    //     data.forEach(({img, altimg, title, descr, price}) => {
+    //         const element = document.createElement('div');
 
-    new MenuCard(
-        "img/tabs/elite.jpg",
-        "elite",
-        'Меню «Преміум»',
-        'У меню «Преміум» ми використовуємо не тільки гарний дизайн упаковки, а й якісне виконання страв. Червона риба, морепродукти, фрукти - ресторанне меню без походу в ресторан!',
-        21,
-        ".menu .container",
-        'menu__item',
-        'big'
-    ).render();
+    //         element.classList.add("menu__item");
+
+    //         element.innerHTML = `
+    //             <img src=${img} alt=${altimg}>
+    //             <h3 class="menu__item-subtitle">${title}</h3>
+    //             <div class="menu__item-descr">${descr}</div>
+    //             <div class="menu__item-divider"></div>
+    //             <div class="menu__item-price">
+    //                 <div class="menu__item-cost">Цена:</div>
+    //                 <div class="menu__item-total"><span>${price}</span> грн/день</div>
+    //             </div>
+    //         `;
+    //         document.querySelector(".menu .container").append(element);
+    //     });
+    // }
 
     // Forms
 
     const forms = document.querySelectorAll('form');
     const message = {
-        loading: 'form/spinner.svg',
+        loading: 'img/form/spinner.svg',
         success: 'Дякую! Скоро ми з вами зв`яжемося',
         failure: 'Щось пішло не так...'
     };
 
     forms.forEach(item => {
-        postData(item);
+        bindPostData(item);
     });
 
-    function postData(form) {
+    const postData = async (url, data) => {
+        let res = await fetch(url, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: data
+        });
+    
+        return await res.json();
+    };
+
+    async function getResource(url) {
+        let res = await fetch(url);
+    
+        if (!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    }
+
+    function bindPostData(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -251,18 +268,10 @@ window.addEventListener("DOMContentLoaded", () =>{
         
             const formData = new FormData(form);
 
-            const object = {};
-            formData.forEach(function(value, key){
-                object[key] = value;
-            });
+            const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-            fetch('server.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(object)
-            }).then(data => {
+            postData('http://localhost:3000/requests', json)
+            .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
                 statusMessage.remove();
