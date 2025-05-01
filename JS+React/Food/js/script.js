@@ -227,62 +227,54 @@ window.addEventListener("DOMContentLoaded", () =>{
     // Forms
 
     const forms = document.querySelectorAll('form');
-
     const message = {
-       loading: 'form/spinner.svg',
-       success: "Дякую! Скоро ви зв`яжемося з вами",
-       failure: 'Щось пішло не так...'
+        loading: 'form/spinner.svg',
+        success: 'Дякую! Скоро ми з вами зв`яжемося',
+        failure: 'Щось пішло не так...'
     };
 
     forms.forEach(item => {
         postData(item);
-    }); 
+    });
 
-    function postData(form){
-        form.addEventListener('submit', (e) =>{
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const statusMessage = document.createElement('img');
+            let statusMessage = document.createElement('img');
             statusMessage.src = message.loading;
             statusMessage.style.cssText = `
                 display: block;
                 margin: 0 auto;
             `;
-
             form.insertAdjacentElement('afterend', statusMessage);
-
-            const request = new XMLDocument();
-            request.open('POST', 'server.php');
-
-            request.setRequestHeader('Content-type', 'application/json'); 
-            const formData = new formData(form);
+        
+            const formData = new FormData(form);
 
             const object = {};
-            formData.forEach(function ( value, key){
+            formData.forEach(function(value, key){
                 object[key] = value;
             });
 
-            const json = JSON.stringify(object);
-            
-
-            request.send(json);
-
-            request.addEventListener('load', () =>{
-                if(requestAnimationFrame.status === 200){
-                    console.log(request.response);
-                    showThanksModal(message.success);
-                    form.reset();
-                    
-                        statusMessage.remove();
-                    
-                } else{
-                    showThanksModal(message.failure);
-                }
+            fetch('server.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(object)
+            }).then(data => {
+                console.log(data);
+                showThanksModal(message.success);
+                statusMessage.remove();
+            }).catch(() => {
+                showThanksModal(message.failure);
+            }).finally(() => {
+                form.reset();
             });
         });
     }
 
-    function showThanksModal(message){
+    function showThanksModal(message) {
         const prevModalDialog = document.querySelector('.modal__dialog');
 
         prevModalDialog.classList.add('hide');
@@ -292,11 +284,10 @@ window.addEventListener("DOMContentLoaded", () =>{
         thanksModal.classList.add('modal__dialog');
         thanksModal.innerHTML = `
             <div class="modal__content">
-                <div class="modal__close" data-close>x</div>
-                <div class="modal__title" data-close>${message}</div>
+                <div class="modal__close" data-close>×</div>
+                <div class="modal__title">${message}</div>
             </div>
         `;
-
         document.querySelector('.modal').append(thanksModal);
         setTimeout(() => {
             thanksModal.remove();
